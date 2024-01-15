@@ -6,7 +6,7 @@
 /*   By: aneitenb <aneitenb@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 10:12:33 by aneitenb          #+#    #+#             */
-/*   Updated: 2024/01/12 14:21:59 by aneitenb         ###   ########.fr       */
+/*   Updated: 2024/01/15 16:41:43 by aneitenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define PUSH_SWAP_H
 
 # include ".././libft/libft.h"
-# include <stdio.h>
 # include <stdlib.h>
 # include <limits.h>
 
@@ -27,9 +26,10 @@ typedef struct s_stack
 	struct s_stack	*previous;
 }	t_stack;
 
-t_stack	*make_stack(t_stack *a, char **array);
-int		ft_atol(const char *str);
+t_stack	*make_stack(t_stack *stack_a, char **array);
 char	**ft_split(char const *s, char c);
-//void	error_exit(int e);
+void	check_input(int count, char **input);
+void	error_exit(int status);
+int		stack_ordered(t_stack *stack_a);
 
 #endif

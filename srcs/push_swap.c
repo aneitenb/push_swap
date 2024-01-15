@@ -6,30 +6,28 @@
 /*   By: aneitenb <aneitenb@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:48:51 by aneitenb          #+#    #+#             */
-/*   Updated: 2024/01/12 15:13:17 by aneitenb         ###   ########.fr       */
+/*   Updated: 2024/01/15 16:57:20 by aneitenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
-	t_stack	*a;
-	t_stack	*b;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 	
-	a = NULL;
-	b = NULL;
+	stack_a = NULL;
+	stack_b = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		return (printf("Error\n")); 
-	check_input(argc, argv + 1); //add checks for everything beforehand, void for exit
+		return(0); 
+	check_input(argc, argv);
 	if (argc == 2)
-		a = make_stack(a, ft_split(argv[1], ' '));
+		stack_a = make_stack(stack_a, ft_split(argv[1], ' '));
 	if (argc > 2)
-		a = make_stack(a, argv + 1);
-	while (a)
-	{
-		printf("%d\n", a->data);
-		a = a->next;
-	}
+		stack_a = make_stack(stack_a, argv + 1);
+	if (!stack_ordered(stack_a))
+		return(0);
+	write(1, "not ordered", 12);
+	return (0);
 }

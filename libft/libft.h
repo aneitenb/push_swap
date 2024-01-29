@@ -6,7 +6,7 @@
 /*   By: aneitenb <aneitenb@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:52:13 by aneitenb          #+#    #+#             */
-/*   Updated: 2024/01/10 11:31:09 by aneitenb         ###   ########.fr       */
+/*   Updated: 2024/01/16 16:45:12 by aneitenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,13 @@ char	**ft_split(char const *s, char c);
 /*       printf functions      */
 /*******************************/
 
-int	ft_printf(const char *format, ...);
-int	pf_putchar(char c, int *check);
-int	pf_putstr(char *str, int *check);
-int	pf_putnbr(int num, int *check);
-int	pf_puthexbase(unsigned long num, int cap, int *check);
-int	pf_putun(unsigned int num, int *check);
-int	pf_putptr(void *ptr, int *check);
+int		ft_printf(const char *format, ...);
+int		pf_putchar(char c, int *check);
+int		pf_putstr(char *str, int *check);
+int		pf_putnbr(int num, int *check);
+int		pf_puthexbase(unsigned long num, int cap, int *check);
+int		pf_putun(unsigned int num, int *check);
+int		pf_putptr(void *ptr, int *check);
 
 /*******************************/
 /*   get_next_line functions   */

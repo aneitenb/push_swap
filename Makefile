@@ -8,10 +8,17 @@ SOURCES = srcs/push_swap.c \
 			srcs/make_stack.c \
 			srcs/error_exit.c \
 			srcs/checks.c \
+			srcs/utils.c \
+			srcs/op_swap.c \
+			srcs/op_rotate.c \
+			srcs/sort_stack.c \
+			srcs/op_rr.c \
+			srcs/op_push.c \
+
 	
 OBJECTS = $(SOURCES:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g #remove -g
 
 CC = @cc
 

@@ -6,7 +6,7 @@
 /*   By: aneitenb <aneitenb@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 14:04:53 by aneitenb          #+#    #+#             */
-/*   Updated: 2024/01/29 13:20:42 by aneitenb         ###   ########.fr       */
+/*   Updated: 2024/01/31 10:30:08 by aneitenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	rrb(t_stack **stack)
 	*stack = last;
 	write(1, "rrb\n", 4);
 }
+
 void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
 	rra(stack_a);

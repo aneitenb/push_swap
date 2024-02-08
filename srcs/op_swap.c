@@ -6,7 +6,7 @@
 /*   By: aneitenb <aneitenb@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 11:25:41 by aneitenb          #+#    #+#             */
-/*   Updated: 2024/01/29 16:20:20 by aneitenb         ###   ########.fr       */
+/*   Updated: 2024/01/31 10:24:59 by aneitenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	sa(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*second;
-	t_stack *third;
-	
+	t_stack	*third;
+
 	first = *stack;
 	second = (*stack)->next;
 	third = second->next;
@@ -31,8 +31,8 @@ void	sb(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*second;
-	t_stack *third;
-	
+	t_stack	*third;
+
 	first = *stack;
 	second = (*stack)->next;
 	third = second->next;
@@ -42,7 +42,7 @@ void	sb(t_stack **stack)
 	write (1, "sb\n", 3);
 }
 
-void	ss(t_stack *stack_a, t_stack *stack_b) 
+void	ss(t_stack *stack_a, t_stack *stack_b)
 {
 	sa(&stack_a);
 	sb(&stack_b);

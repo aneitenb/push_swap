@@ -6,7 +6,7 @@
 /*   By: aneitenb <aneitenb@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 11:31:43 by aneitenb          #+#    #+#             */
-/*   Updated: 2024/01/29 15:42:10 by aneitenb         ###   ########.fr       */
+/*   Updated: 2024/02/02 15:17:10 by aneitenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_stack	*add_at_end(t_stack *stack_a, int data)
 {
 	t_stack	*temp;
 	t_stack	*last_node;
-	
+
 	temp = malloc(sizeof(t_stack));
 	if (!temp)
 		error_exit_free(stack_a);
@@ -45,7 +45,7 @@ t_stack	*init_min(t_stack **stack)
 	t_stack	*temp;
 	t_stack	*min;
 	int		flag;
-	
+
 	temp = *stack;
 	flag = 0;
 	while (temp)

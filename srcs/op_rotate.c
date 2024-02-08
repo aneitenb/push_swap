@@ -6,7 +6,7 @@
 /*   By: aneitenb <aneitenb@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:07:38 by aneitenb          #+#    #+#             */
-/*   Updated: 2024/01/29 15:43:14 by aneitenb         ###   ########.fr       */
+/*   Updated: 2024/02/01 13:07:10 by aneitenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,19 @@ void	rb(t_stack **stack)
 	t_stack	*second;
 	t_stack	*last;
 
+	if (stack_length(*stack) == 1)
+		return ;
+	if (stack_length(*stack) == 2)
+	{
+		first = *stack;
+		*stack = (*stack)->next;
+		last = get_last(stack);
+		last->next = first;
+		first->next = NULL;
+		*stack = last;
+		write(1, "rb\n", 3);
+		return ;
+	}
 	first = *stack;
 	second = (*stack)->next;
 	last = get_last(stack);

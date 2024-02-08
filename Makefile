@@ -11,14 +11,14 @@ SOURCES = srcs/push_swap.c \
 			srcs/utils.c \
 			srcs/op_swap.c \
 			srcs/op_rotate.c \
-			srcs/sort_stack.c \
 			srcs/op_rr.c \
 			srcs/op_push.c \
-
+			srcs/sort_stack.c \
+			srcs/radix_sort.c
 	
 OBJECTS = $(SOURCES:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror -g #remove -g
+CFLAGS = -Wall -Wextra -Werror 
 
 CC = @cc
 
